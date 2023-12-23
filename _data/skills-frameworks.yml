@@ -1,0 +1,30 @@
+# > name: Name of your framework
+# > weight: Describes how good you know the framework - values from 1 up to 5
+#
+# Example of a framework
+# - name: Framework
+#   weight: 5
+
+- name: ROS
+  weight: 4
+
+- name: MoveIT
+  weight: 4
+
+- name: PlatformIO
+  weight: 5
+
+- name: Arduino
+  weight: 5
+
+- name: Flutter
+  weight: 2
+
+- name: Tokio 
+  weight: 3
+
+- name: PyTorch
+  weight: 2
+
+- name: OpenCV
+  weight: 3
