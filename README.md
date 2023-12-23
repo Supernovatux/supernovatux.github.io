@@ -1,14 +1,6 @@
-# cvless
+# My personal home page/blog
 
-Cvless is a theme for static websites built with Jekyll. It aims for simplicity and readability by following best practices of graphic design, like the use of [high contrast](https://www.contrastrebellion.com), [law of proximity](https://lawsofux.com/law-of-proximity), and responsive layout. Its typography is based on the [Piazzolla system](https://piazzolla.huertatipografica.com/), which performs extremely well over a wide range of font sizes.
-
-The main aesthetic feature of the theme is the use of [particles.js](https://vincentgarreau.com/particles.js/) in the home and the 404 pages. In addition, the theme includes a well-designed CV page. Printing this from browser automatically adapts the layout for a more traditional appearance, so you no longer have to maintain a separate CV for offline distribution. Finally, the theme offers a simple and easily extensible blog.
-
-Light and dark modes are available. The theme initializes based on system preferences and stores the user's preference for the duration of the session.
-
-See the [demo](https://cvless.netlify.app) to get a better sense of what the theme looks like.
-
-![](https://github.com/piazzai/cvless/blob/master/screenshot.jpg)
+Based on [Cvless](https://github.com/piazzai/cvless). I took some components from [neumorphism](https://github.com/longpdo/neumorphism)
 
 ## Installation
 
@@ -16,6 +8,8 @@ See the [demo](https://cvless.netlify.app) to get a better sense of what the the
 2.  Rename it to `[username].github.io`.
 3.  Start editing!
 
+
+The below stuff taken exactly as in [Cvless](https://github.com/piazzai/cvless)
 ## Usage
 
 Configuration primarily occurs in four files. First, `_config.yml`, which contains site variables such as title, tagline, url, and repository address, as well as the author's name and email address for inclusion in blog posts. You can also specify the path to an avatar for inclusion in the home (optional).
@@ -28,25 +22,6 @@ Fourth, you might want to edit the style variables specified in `_sass/_variable
 
 In addition to these files, you can customize favicons in the `assets` folder. For that, [favicon.io](https://favicon.io/) is an excellent tool. You can also change the particles.js configurations in `assets/json`. The [library homepage](https://vincentgarreau.com/particles.js/) features an interactive tool from which you can export a new configuration.
 
-## Local Development
-
-This repo includes a docker-compose file that allows you to quickly setup a container running Jekyll. If you don't already have Docker and docker-compose installed, you can install them using the following guides:
-
-**Install Guides**
-* [Docker](https://docs.docker.com/get-docker/)
-* [docker-compose](https://docs.docker.com/compose/install/)
-
-To start the container simply run:
-
-```
-docker-compose up
-```
-
-Alternatively you can run the container without docker-compose using this command on iOS/Linux:
-
-```
-docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
-```
 
 ## Credits
 
@@ -59,7 +34,10 @@ The theme draws in one way or another from the following projects:
 -   [Particles.js](https://vincentgarreau.com/particles.js/)
 -   [Piazzolla](https://piazzolla.huertatipografica.com/)
 -   [Poole](https://getpoole.com/)
+-   [Cvless](https://github.com/piazzai/cvless)
+-   [neumorphism](https://github.com/longpdo/neumorphism)
+
 
 ## Bugs
 
-If you find any problem using this theme, please [open an issue](https://github.com/piazzai/cvless/issues).
+If you find any problem using this theme, please open an issue
