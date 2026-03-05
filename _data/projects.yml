@@ -13,11 +13,19 @@
 #     - tag: AngularJS
 #     - tag: Node
 
-- name: Openloop Control of Soft continuum Robot 
-  descr: I used a deeplearning to predict the end effector pose of a 3-Printed Continuum robot without any feedback. The model for accurate to 5mm.
+- name: libpam-pwdfile-rs
+  descr: A Linux Pluggable Authentication Module (PAM) written in Rust that allows users to use multiple passwords for a single account. Packaged for Arch Linux via the AUR.
+  demo: https://github.com/Supernovatux/libpam-pwdfile-rs
+  tags:
+    - tag: Rust
+    - tag: Linux
+    - tag: PAM
+
+- name: Openloop Control of Soft Continuum Robot
+  descr: Used deep learning to predict the end effector pose of a 3D-printed continuum robot without any feedback. The model was accurate to 5 mm.
   tags:
     - tag: Python
-    - tag: TensorFlow
+    - tag: PyTorch
     - tag: C++
     - tag: OpenCV
 

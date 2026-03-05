@@ -1,23 +1,24 @@
 ---
 layout: post
-title: " ROS Workshop Setup"
-lead: with Virtual Machines
+title: "Effortless ROS Workshop Setup with Virtual Machines"
+lead: Pre-configure once, distribute to everyone
 ---
 
-**TLDR;** Install ROS in VM. Then export it as OVA file. Distribute this file with the audience. It should take less than 10 mins.
+**TLDR;** Install ROS in a VM, export it as an OVA file, and distribute it to attendees. Setup takes less than 10 minutes on their end.
 {: .message }
 
-So recently I had to conduct a workshop on ROS+Moveit. The workshop had a big time contain, 1 hour. By following these steps, you can conduct a ROS and Moveit workshop efficiently in just 10 minutes. The pre-configured virtual machine allows participants to focus on the content of the workshop without wasting time setting up the software.
+I recently had to conduct a workshop on ROS + MoveIt with a tight time constraint of one hour. By pre-configuring a virtual machine, participants can skip all the setup friction and jump straight into the content.
 
 # Procedure
-1. Choose a lightweight distro. I choose Lubuntu.
-2. A Virtual HDD space of 9GB should be enough for Lubuntu + ROS + MoveIt + Jupyter Notebook
-3. Do a minimal install in the VM. Do not install 3rd party drivers.
-4. Install guest additions from the `apt` repository.
-5. (Optional) Remove Bluetooth related and other not needed packages.
+
+1. Choose a lightweight distro. I used Lubuntu.
+2. 9 GB of virtual disk space is sufficient for Lubuntu + ROS + MoveIt + Jupyter Notebook.
+3. Do a minimal install in the VM — skip third-party drivers.
+4. Install VirtualBox Guest Additions from the `apt` repository.
+5. *(Optional)* Remove Bluetooth and other unneeded packages to keep the image small.
 6. Install ROS.
-7. Configure the workspace the environment variables.
-8. Do yourself a favor by installing ZSH with auto suggestions on the machine.
-9. Make sure that all the files needed for the workshop is present in the VM.
-10.  Export the VM as a OVA file.
-11. Now share it with ppl :)
+7. Configure the workspace and environment variables.
+8. Install ZSH with autosuggestions — participants will thank you.
+9. Make sure all workshop files are present in the VM.
+10. Export the VM as an OVA file.
+11. Share it with your participants.

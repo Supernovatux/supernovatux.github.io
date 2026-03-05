@@ -6,9 +6,8 @@ title: Home
 # About
 
 Hello, I am Thulashitharan D, a passionate engineer with a strong affinity for solving complex multidisciplinary
-engineering problems. My expertise spans Linux, Rust, 
-Python, Embedded Sensing and Controls, and Parametric CAD software. This diverse skill set enables me to work across
-different domains and quickly acquire new skills
+engineering problems. My expertise spans Linux, Rust, Python, Embedded Sensing and Controls, and Parametric CAD.
+I am currently pursuing my MEng at Waseda University, Japan, on a MEXT scholarship.
 
 In my free time I like exploring various open source software and technologies.
 

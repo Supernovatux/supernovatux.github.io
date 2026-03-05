@@ -4,13 +4,11 @@ title: On Dualboot + TPM + LUKS + Legion 5 Pro 16ACH6H
 lead: A very quick guide.
 ---
 
-Hello,
+This is a short note on how I set up my Legion 5 Pro with Arch Linux + Windows 11 dual-boot.
 
-This is a short note on how I set up my Legion 5 pro with Archlinux + Windows 11 Dualboot.
-
-# Procedure 
-- Read all the instructions and the files provided before proceeding
-- My partition structure look like. Other than the once below I have my windows partition, windows recovery partition, and Linux swap partition.
+# Procedure
+- Read all the instructions and linked resources before proceeding
+- My partition structure looks like the following. In addition to those below, I have a Windows partition, Windows recovery partition, and a Linux swap partition.
 
 ```bash
 > sudo inxi -p
@@ -69,7 +67,7 @@ LUKS_SWAP /dev/nvme0n1p7 none discard
 root=UUID=90f8214f-7vc3-408a-a00a-2ec2c47ffcdd rw rootflags=subvol=@ nowatchdog nmi_watchdog=0 mitigations=off resume=/dev/mapper/LUKS_SWAP quiet bgrt_disable
 ```
 
-- Use [sbctl](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Implementing_Secure_Boot)  to create and sign the efi binaries. Enroll with Microsoft's keys `sudo sbctl enroll-keys -m` .I use [sbctl-initcpio-post-hook ]() for automatic signing after each kernel update.
+- Use [sbctl](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Implementing_Secure_Boot) to create and sign the EFI binaries. Enroll with Microsoft's keys: `sudo sbctl enroll-keys -m`. I use a post-install hook for automatic signing after each kernel update.
 - Now turn on secure boot in bios and see if everything works.
 - If everything works enroll `tpm` state into the `LUKS root volume` . I use a file as in below for this purpose
 
@@ -77,10 +75,10 @@ root=UUID=90f8214f-7vc3-408a-a00a-2ec2c47ffcdd rw rootflags=subvol=@ nowatchdog 
 #!/bin/bash
 echo "This script will enroll latest TPM2 PCR values into the LUKS2 header of the root and swap partition. You will need to rerun this script everytime you upgrade/modify your kernel"
 
-#/etc/cryptsetup-keys.d/CRYPT_ROOT.key contains the secret to unlock the LUKS volume
-#That file can be created using
-#print "<password>" | sudo tee /etc/cryptsetup-keys.d/CRYPT_ROOT.key
-# else you can remove the --unlock-key-file=/etc/cryptsetup-keys.d/CRYPT_ROOT.key part and let the program pront for the passphrase
+# /etc/cryptsetup-keys.d/CRYPT_ROOT.key contains the secret to unlock the LUKS volume.
+# That file can be created using:
+#   printf "<password>" | sudo tee /etc/cryptsetup-keys.d/CRYPT_ROOT.key
+# Alternatively, remove the --unlock-key-file flag to have the program prompt for the passphrase.
 echo "Wiping nvme0n1p7 tpm2 slots"
 sudo systemd-cryptenroll /dev/nvme0n1p7 --wipe-slot=tpm2 
 echo "Wiping nvme0n1p6 tpm2 slots"
@@ -91,5 +89,5 @@ echo "Enrolling nvme0n1p7 with tpm2 pcr 4+7+14"
 sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=4+7+14 /dev/nvme0n1p7 --unlock-key-file=/etc/cryptsetup-keys.d/CRYPT_ROOT.key 
 ```
 
-- Everything should work in theory :)
+- Everything should work at this point. Good luck!
 

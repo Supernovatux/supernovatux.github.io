@@ -35,6 +35,9 @@
 - name: Rust
   weight: 5
 
+- name: Verilog
+  weight: 3
+
 - name: GDScript
   weight: 3
 

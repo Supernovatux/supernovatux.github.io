@@ -5,6 +5,9 @@
 # - name: Framework
 #   weight: 5
 
+- name: Modbus
+  weight: 4
+
 - name: ROS
   weight: 4
 
