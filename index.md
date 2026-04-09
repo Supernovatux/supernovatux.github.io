@@ -11,7 +11,7 @@ I am currently pursuing my MEng at Waseda University, Japan, on a MEXT scholarsh
 
 In my free time I like exploring various open source software and technologies.
 
-Click [here](/cv.pdf) to download a print version of my CV. I also write a blog during my free time. [Click here](/posts) to scroll posts from the most recent.
+Click [here](/cv.pdf) to download a print version of my CV. View my [project portfolio](/Project%20portfolio.pdf){:target="_blank"}. I also write a blog during my free time. [Click here](/posts) to scroll posts from the most recent.
 
 {% include section-skills.html %}
 {% include section-projects.html %}
